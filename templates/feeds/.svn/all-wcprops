@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repos/reinhardt/!svn/ver/518/templates/feeds
+END
+news_title.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/reinhardt/!svn/ver/2/templates/feeds/news_title.html
+END
+seating_description.html
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/reinhardt/!svn/ver/488/templates/feeds/seating_description.html
+END
+news_description.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/reinhardt/!svn/ver/371/templates/feeds/news_description.html
+END
+pagerevisions_title.html
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/reinhardt/!svn/ver/508/templates/feeds/pagerevisions_title.html
+END
+pagerevisions_description.html
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/reinhardt/!svn/ver/518/templates/feeds/pagerevisions_description.html
+END
+events_title.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/reinhardt/!svn/ver/327/templates/feeds/events_title.html
+END
+minutes_title.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/reinhardt/!svn/ver/2/templates/feeds/minutes_title.html
+END
+events_description.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/reinhardt/!svn/ver/327/templates/feeds/events_description.html
+END
+minutes_description.html
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/reinhardt/!svn/ver/371/templates/feeds/minutes_description.html
+END
+tickets_title.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/reinhardt/!svn/ver/504/templates/feeds/tickets_title.html
+END
+signups_title.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/reinhardt/!svn/ver/488/templates/feeds/signups_title.html
+END
+tickets_description.html
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/reinhardt/!svn/ver/504/templates/feeds/tickets_description.html
+END
+seating_title.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/reinhardt/!svn/ver/488/templates/feeds/seating_title.html
+END

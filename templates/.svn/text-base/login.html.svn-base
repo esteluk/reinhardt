@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block sidebar-outer %}{% endblock %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+<p class="notification">You are already logged in. <a href="/logout">Click here</a> to log out.</p>
+{% else %}
+{% if form.errors %}
+<p class="notification">{{ form.non_field_errors|striptags }}</p>
+{% endif %}
+
+<div class="box">
+	<h2>Login</h2>
+	<form action="" method="post">
+		<div class="input">
+			{{ form.username.label_tag }}
+			{{ form.username }}
+			{{ form.username.errors }}
+		</div>
+		<div class="input">
+			{{ form.password.label_tag }}
+			{{ form.password }}
+			{{ form.password.errors }}
+		</div>
+		<div class="input">
+			<input type="submit" value="login" />
+			<input type="hidden" name="next" value="{{ next }}" />
+		</div>
+	</form>
+	<div class="clear"></div>
+</div>
+
+<div class="box">
+	<h2>Forgotten your details?</h2>
+	<p>Your username should be your university ID number. If you like, you can <a href="/password_reset/">reset your password</a></p>
+</div>
+
+<div class="box">
+	<h2>Guest Account</h2>
+    <p>You may <a href="{% url guest_account %}">request a guest account</a>.</p>
+</div>
+
+{% endif %}
+{% endblock %}

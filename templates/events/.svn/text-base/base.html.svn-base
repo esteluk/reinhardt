@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block feedlinks %}
+	<link href="/feeds/events/" rel="alternate" type="application/rss+xml" title="Future event feed" />
+{% endblock %}
+
+{% block events %}class="active"{% endblock %}
+
+{% block morehead %}
+    <link href="/static/css/events.css" rel="stylesheet" type="text/css" media="screen" />
+{% endblock %}
+
+{% block sidebar %}
+    <ul>
+        <li>
+            <h2>Events</h2>
+            <ul>
+                <li><a href="/events/">Events List</a></li>
+				<li><a href="/events/calendar/">Calendar</a></li>
+				<li><a href="/events/activity/">Activity</a></li>
+            </ul>
+        </li>
+        {% include "events/future.html" %}
+        <li>
+            <h2>Feeds</h2>
+            <ul>
+                <li><a href="/feeds/events/">RSS</a></li>
+                <li><a href="/feeds/events/atom/">Atom</a></li>
+                <li><a href="/events/ical/">ical</a></li>
+            </ul>
+        </li>
+    </ul>
+{% endblock %}

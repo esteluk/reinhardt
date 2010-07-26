@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repos/reinhardt/!svn/ver/418/templates/events/admin
+END
+email_signups_form.html
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/reinhardt/!svn/ver/418/templates/events/admin/email_signups_form.html
+END
+email_signups_done.html
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/reinhardt/!svn/ver/43/templates/events/admin/email_signups_done.html
+END
+unify_locations.html
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/reinhardt/!svn/ver/289/templates/events/admin/unify_locations.html
+END
+base.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/reinhardt/!svn/ver/43/templates/events/admin/base.html
+END

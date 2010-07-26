@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/repos/reinhardt/!svn/ver/605/events
+END
+admin.py
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repos/reinhardt/!svn/ver/603/events/admin.py
+END
+views.py
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repos/reinhardt/!svn/ver/575/events/views.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/reinhardt/!svn/ver/379/events/__init__.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/repos/reinhardt/!svn/ver/605/events/models.py
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/repos/reinhardt/!svn/ver/557/events/urls.py
+END
+admin_views.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/reinhardt/!svn/ver/453/events/admin_views.py
+END
+similarity.py
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/reinhardt/!svn/ver/411/events/similarity.py
+END

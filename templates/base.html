@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	
+	<title>{% block ttitle %}Welcome{% endblock %} - University of Warwick Computing Society</title>
+
+	<link href="/static/css/compsoc.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="/static/css/print.css" rel="stylesheet" type="text/css" media="print" />
+	<link href="/static/img/logo.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	{% block feedlinks %}{% endblock %}
+	<!--[if lt IE 7.]>
+		<script defer type="text/javascript" src="/static/js/pngfix.js"></script>
+	<![endif]-->
+
+	<script type="text/javascript" src="/static/js/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			$.getScript(gaJsHost + "google-analytics.com/ga.js", function () {
+				try {
+					var pageTracker = _gat._getTracker("UA-220431-4");
+					pageTracker._setDomainName("none");
+					pageTracker._setAllowLinker(true);
+					pageTracker._trackPageview();
+				} catch(err) {}
+			});
+		});
+	
+	</script>
+	{% block morehead %}{% endblock %}
+</head>
+
+<body>
+{% block pretitle %}{% endblock %}
+
+<div id="container">
+	<!-- start header -->
+	<div id="header">
+		<div id="sponsor" style="float:right; padding-right:30px"><img alt="Supported by IBM" src="/static/img/IBM.png"/></div>
+		<div id="top-right">
+			{% if user.is_authenticated %}
+				Logged in as {{ user.member.name }}<br />
+				<a href="/member/">profile</a>
+				<a href="/logout/">logout</a>
+			{% else %}
+			<a href="/login/?next={% block next %}{{ request.path }}{% endblock %}">login</a>
+			{% endif %}
+			<form action="/search/" method="post">
+				<div>
+					<input type="text" name="searchBox" />
+					<span style="display: none"><input type="submit" /></span>
+				</div>
+			</form>
+		</div>
+		<div id="logo">
+			<h1><a href="/"><img src="/static/img/logo.png" alt="University of Warwick Computing Society" /></a></h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li {% block home %}{% endblock %} ><a href="/">Home</a></li>
+				<li {% block events %}{% endblock %} ><a href="/events/">Events</a></li>
+				<li {% block about %}{% endblock %} ><a href="/cms/about">About</a></li>
+				<li {% block contact %}{% endblock %} ><a href="/cms/contact">Contact</a></li>
+				<li {% block tickets %}{% endblock %} ><a href="/tickets/">Tickets</a></li>
+				{% if user.is_staff %}
+					<li {% block adminu %}{% endblock %}><a href="/admin">Admin</a></li>
+				{% endif %}
+			</ul>
+		</div>
+		{% block nav-global %}{% endblock %}
+	</div>
+	<!-- end header -->
+	<!-- start page -->
+	<div id="page">
+		<!-- start sidebar -->
+		{% block sidebar-outer %}<div id="sidebar">{% block sidebar %}{% endblock %}</div>{% endblock %}
+		<!-- end sidebar -->
+		<!-- start content -->
+		<div id="content">
+		{% block content_title %}{% endblock %}
+		{% block breadcrumbs %}
+			{% if breadcrumbs %}
+				<div class="crumbs">
+				{% for url,name in breadcrumbs %}
+					{% if not forloop.last %}
+						<a href="{{ url }}">{{ name.lower }}</a>
+						&rsaquo;
+					{% else %}
+						{{ name.lower }}
+					{% endif %}
+				{% endfor %}
+				</div>
+			{% endif %}
+		{% endblock %}
+		{% block content %}{% endblock %}
+		</div>
+		<!-- end content -->
+	</div>
+	<!-- end page -->
+	<div id="footer-spacer"></div> 
+</div>
+<!-- start footer -->
+<div id="footer">
+	<span>&copy; University of Warwick Computing Society</span>
+</div>
+<!-- end footer -->
+</body>
+</html>

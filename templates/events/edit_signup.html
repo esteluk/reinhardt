@@ -1,0 +1,21 @@
+{% extends "events/base.html" %}
+
+{% block content %}
+	<div class="notification">
+	    <form action="/events/signup/{{ event_id }}/" method="post">
+	    {{ form.as_p }}
+	    <p><input type="submit" value="save" /></p>
+	    </form>
+	</div>
+{% endblock %}
+
+{% block sidebar %}
+    <ul>
+        <li>
+            <h2>Event</h2>
+            <ul>
+                <li><a href="/events/details/{{ event_id }}/">Back to event</a></li>
+            </ul>
+        </li>
+	</ul>
+{% endblock %}

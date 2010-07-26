@@ -1,0 +1,56 @@
+{% extends "tournaments/base.html" %}
+
+{% load tournament %}
+
+{% block ttitle %}Tournament List{% endblock %}
+
+{% block content %}
+	{% if user.is_staff %}
+        <a class="edit" href="/admin/tournaments/tournament/{{ tournament.id }}/">Edit</a>
+    {% endif %}
+    <h2 class="title">Tournament Details for {{ tournament }}</h2>
+    <dl>
+        <dt>Tournament Type</dt>
+        <dd>{{ tournament.get_type_display }}</dd>
+        <dt>Game</dt>
+        <dd>{{ tournament.game }}</dd>
+        <dt>In Progress</dt>
+        <dd>{{ tournament.is_in_progress|yesno }}</dd>
+    </dl>
+
+    {% if tournament.is_elim_cup %}
+        <div class="tournament{{ tournament.tree_size }}-wrap">
+            {{ tournament|tournament_divs }}
+        </div>
+    {% else %}
+        <table>
+            <tr>
+            {% for alloc in tournament.allocation_set.all %}
+                <td>{{ alloc.user }}</td>
+            {% endfor %}
+            </tr>
+            {{ tournament|tournament_league }}
+        </table>
+    {% endif %}
+    <hr />
+    <br />
+    {% if user.is_staff %}
+        <div class="winner-form">
+            {% if tournament.is_in_progress %}
+                <form action="{% url tournaments.views.tournament_detail tournament.pk %}" method="POST">
+                    {{ win_form.as_p }}
+                    <input type="submit" value="Add Win" />
+                </form>
+            {% endif %}
+        </div>
+        <div class="player-form">
+            {% if tournament.is_not_full %}
+                <form action="{% url tournaments.views.add_player_to_tournament tournament.pk %}" method="POST">
+                    {{ play_form.as_p }}
+                    <input type="submit" value="Add Player" />
+                </form>
+            {% endif %}
+        </div>
+    {% endif %}
+
+{% endblock %}

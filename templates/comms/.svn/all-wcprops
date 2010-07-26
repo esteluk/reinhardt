@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repos/reinhardt/!svn/ver/540/templates/comms
+END
+newsletter.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/reinhardt/!svn/ver/540/templates/comms/newsletter.html
+END
+communication_detail.html
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/reinhardt/!svn/ver/447/templates/comms/communication_detail.html
+END
+base.html
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repos/reinhardt/!svn/ver/319/templates/comms/base.html
+END
+list.html
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repos/reinhardt/!svn/ver/370/templates/comms/list.html
+END

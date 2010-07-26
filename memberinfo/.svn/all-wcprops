@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/repos/reinhardt/!svn/ver/597/memberinfo
+END
+admin.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/reinhardt/!svn/ver/576/memberinfo/admin.py
+END
+views.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/reinhardt/!svn/ver/570/memberinfo/views.py
+END
+mailman.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/reinhardt/!svn/ver/268/memberinfo/mailman.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/reinhardt/!svn/ver/2/memberinfo/__init__.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/reinhardt/!svn/ver/593/memberinfo/models.py
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/reinhardt/!svn/ver/570/memberinfo/urls.py
+END
+admin_views.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repos/reinhardt/!svn/ver/435/memberinfo/admin_views.py
+END
+forms.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/reinhardt/!svn/ver/593/memberinfo/forms.py
+END

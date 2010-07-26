@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/reinhardt/!svn/ver/596/templates/elections
+END
+election_list.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/reinhardt/!svn/ver/592/templates/elections/election_list.html
+END
+election_summary.html
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/reinhardt/!svn/ver/596/templates/elections/election_summary.html
+END
+ballot_form.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/reinhardt/!svn/ver/591/templates/elections/ballot_form.html
+END
+thankyou.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/reinhardt/!svn/ver/577/templates/elections/thankyou.html
+END
+election_detail.html
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/reinhardt/!svn/ver/590/templates/elections/election_detail.html
+END
+noguest.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/reinhardt/!svn/ver/582/templates/elections/noguest.html
+END
+checklist.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/reinhardt/!svn/ver/581/templates/elections/checklist.html
+END
+closed.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/reinhardt/!svn/ver/579/templates/elections/closed.html
+END

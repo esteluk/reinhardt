@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/repos/reinhardt/!svn/ver/605/
+END
+manage.py
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/repos/reinhardt/!svn/ver/247/manage.py
+END
+rest.py
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/repos/reinhardt/!svn/ver/477/rest.py
+END
+shortcuts.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/repos/reinhardt/!svn/ver/435/shortcuts.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/repos/reinhardt/!svn/ver/2/__init__.py
+END
+COPYING
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/repos/reinhardt/!svn/ver/472/COPYING
+END
+settings.py.default
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/reinhardt/!svn/ver/599/settings.py.default
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/repos/reinhardt/!svn/ver/599/urls.py
+END
+feeds.py
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/repos/reinhardt/!svn/ver/565/feeds.py
+END

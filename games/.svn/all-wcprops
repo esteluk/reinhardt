@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/repos/reinhardt/!svn/ver/476/games
+END
+admin.py
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/repos/reinhardt/!svn/ver/476/games/admin.py
+END
+views.py
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/repos/reinhardt/!svn/ver/476/games/views.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/reinhardt/!svn/ver/476/games/__init__.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repos/reinhardt/!svn/ver/476/games/models.py
+END

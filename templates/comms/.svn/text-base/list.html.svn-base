@@ -1,0 +1,40 @@
+{% extends "comms/base.html" %}
+
+{% load markup %}
+
+{% block content %}
+{% if intro %}
+    <p>The University of Warwick Computing Society is one of the largest and most active societies in the university. We organise both computer and non-computer based socials, academic talks and activities, and provide hosting for both our members and other University societies. The society is open to all members of the University, particularly if you have an active interest in computers and computing: whether academic or recreational. If you wish to find out more about us, please feel free to read this website or <a href="/cms/contact" title="Contact us">contact us</a>.</p>
+{% endif %}
+{% if month %}<h2>{{ type|capfirst }}s from {{ month|date:"M Y"}}</h2>
+{% else %}<h2>Recent {{ type|capfirst }}s</h2>
+{% endif %}
+<br />
+{% if object_list %}
+    {% for comm_item in object_list %}
+        <div class="post">
+			{% if user.is_staff %}
+                <a class="edit" href="/admin/comms/communication/{{ comm_item.id }}/">edit</a>
+            {% endif %}
+            <h3 class="title">{{ comm_item.title }}</h3>
+            <p class="byline"><small>Posted on {{ comm_item.date }}</small></p>
+            <div class="entry">
+            {{ comm_item.text|textile }}
+            </div>
+            <p class="meta"><a href="/details/{{ comm_item.id }}" class="more">details</a></p>
+        </div>
+    {% endfor %}
+
+    {% if is_paginated %}
+        {% ifnotequal page "last" %}
+            {% ifequal type "news item" %}
+                <a href="/news/{{ page|add:"1" }}/">more</a>
+            {% else %}
+                <a href="/{{ type }}s/{{ page|add:"1" }}/">more</a>
+            {% endifequal %}
+        {% endifnotequal %}
+    {% endif %}
+{% else %}
+    <p class="notification">No Items are available.</p>
+{% endif %}
+{% endblock %}

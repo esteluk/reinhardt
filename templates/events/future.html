@@ -1,0 +1,10 @@
+{% if future %}
+<li>
+    <h2>Upcoming</h2>
+    <ul>
+        {% for type,event in future %}
+            <li><a href="/events/details/{{event.id}}/">{{type.name}}</a></li>
+        {% endfor %}
+    </ul>
+</li>
+{% endif %}

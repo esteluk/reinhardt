@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/reinhardt/!svn/ver/593/templates/memberinfo
+END
+reset_email
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/reinhardt/!svn/ver/6/templates/memberinfo/reset_email
+END
+new_user_email
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/reinhardt/!svn/ver/513/templates/memberinfo/new_user_email
+END
+password_reset_success.html
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/reinhardt/!svn/ver/556/templates/memberinfo/password_reset_success.html
+END
+migration_email
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/reinhardt/!svn/ver/363/templates/memberinfo/migration_email
+END
+account_reset.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/reinhardt/!svn/ver/361/templates/memberinfo/account_reset.html
+END
+guest_request.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/reinhardt/!svn/ver/361/templates/memberinfo/guest_request.html
+END
+form_errors.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/reinhardt/!svn/ver/361/templates/memberinfo/form_errors.html
+END
+profile.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/reinhardt/!svn/ver/570/templates/memberinfo/profile.html
+END
+password_reset_no_name.html
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/reinhardt/!svn/ver/556/templates/memberinfo/password_reset_no_name.html
+END
+quota_techteam
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/reinhardt/!svn/ver/15/templates/memberinfo/quota_techteam
+END
+techteam_reset_email
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/reinhardt/!svn/ver/6/templates/memberinfo/techteam_reset_email
+END
+request_error.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/reinhardt/!svn/ver/361/templates/memberinfo/request_error.html
+END
+guest_request_email
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/reinhardt/!svn/ver/92/templates/memberinfo/guest_request_email
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/reinhardt/!svn/ver/593/templates/memberinfo/index.html
+END
+exec_guest_request_email
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/reinhardt/!svn/ver/146/templates/memberinfo/exec_guest_request_email
+END
+service_techteam.html
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/reinhardt/!svn/ver/8/templates/memberinfo/service_techteam.html
+END
+base.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/reinhardt/!svn/ver/334/templates/memberinfo/base.html
+END
+account_techteam_email
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/reinhardt/!svn/ver/15/templates/memberinfo/account_techteam_email
+END
+guest_form.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/reinhardt/!svn/ver/452/templates/memberinfo/guest_form.html
+END
+list.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/reinhardt/!svn/ver/361/templates/memberinfo/list.html
+END

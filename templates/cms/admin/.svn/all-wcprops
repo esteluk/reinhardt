@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/reinhardt/!svn/ver/486/templates/cms/admin
+END
+addedit.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/reinhardt/!svn/ver/484/templates/cms/admin/addedit.html
+END
+move.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/reinhardt/!svn/ver/486/templates/cms/admin/move.html
+END
+view_revision.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/reinhardt/!svn/ver/292/templates/cms/admin/view_revision.html
+END
+base.html
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/reinhardt/!svn/ver/57/templates/cms/admin/base.html
+END

@@ -1,0 +1,43 @@
+{% extends "tracker/base.html" %}
+
+{% load markup %}
+
+{% block ttitle %}Issue Details for {{object.name }}{% endblock %}
+
+{% block sidebar %}
+    <ul>
+        <li>
+            <h2>Actions</h2>
+            <ul>
+				<li><a href="/tickets/">Issue Search</a></li>
+                <li><a href="/tickets/new">New Issue</a></li>
+            </ul>
+        </li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+{% if user.is_staff %}<a class="edit" href="/admin/tracker/ticket/{{ object.id }}/">Edit</a>{% endif %}
+<h2 class="title">{{ object.title }}</h2>
+<br />
+<dl class="details">
+	<dt>Ticket creation date</dt>
+	<dd>{{ object.started|date:"D d M Y" }}</dd>
+	{% if object.due_date %}
+		<dt>Deadline</dt>
+		<dd>{{ object.due_date|date:"D d M Y" }}</dd>
+	{% endif %}
+	<dt>Submitted by</dt>
+	<dd>{{ object.submitter.member.name }}</dd>
+	{% if object.assignee %}	
+		<dt>Assigned To</dt>
+		<dd>{{ object.assignee.member.name }}</dd>
+	{% endif %}
+	<dt>Goal</dt>
+	<dd>{{ object.goal }}</dd>
+	<dt>Completed</dt>
+	<dd>{% if object.completed %}Yes{% else %}No{% endif %}</dd>
+	<dt>Details</dt>
+	<dd><div class="entry">{{ object.description|textile }}</div></dd>
+</dl>
+{% endblock %}

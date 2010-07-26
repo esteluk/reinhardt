@@ -1,0 +1,7 @@
+Hopefully fix ticket #57: events displaying in future.
+--This line, and those below, will be ignored--
+
+M    templates/events/details.html
+M    templates/comms/list.html
+M    events/views.py
+M    events/models.py

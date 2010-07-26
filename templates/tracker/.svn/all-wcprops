@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/reinhardt/!svn/ver/475/templates/tracker
+END
+new_ticket.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/reinhardt/!svn/ver/378/templates/tracker/new_ticket.html
+END
+ticket_change_email
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/reinhardt/!svn/ver/151/templates/tracker/ticket_change_email
+END
+goal_owner_email
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/reinhardt/!svn/ver/151/templates/tracker/goal_owner_email
+END
+blurb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/reinhardt/!svn/ver/151/templates/tracker/blurb
+END
+changes
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repos/reinhardt/!svn/ver/151/templates/tracker/changes
+END
+details.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/reinhardt/!svn/ver/475/templates/tracker/details.html
+END
+search.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/reinhardt/!svn/ver/430/templates/tracker/search.html
+END
+base.html
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repos/reinhardt/!svn/ver/130/templates/tracker/base.html
+END
+goal_change_email
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/reinhardt/!svn/ver/151/templates/tracker/goal_change_email
+END

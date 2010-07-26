@@ -1,0 +1,100 @@
+{% extends "events/base.html" %}
+
+{% block ttitle %}Event Details for {{ event.type.name }}{% endblock %}
+
+{% load markup %}
+
+{% block content %}
+{% if not can_edit and not is_displayed %}
+<p>Whoops! You're really not supposed to be here, stupidface.</p>
+{% else %}
+<div id="event">
+	{% if can_edit %}<a class="edit" href="/admin/events/event/{{ event.id }}/">Edit</a>{% endif %}
+	<h2 class="title">Event Details for {{ event.type.name }}</h2>
+	<dl class="details">
+		{% if event.cancelled %}
+		    <dt>Cancelled</dt>
+		    <dd>Please note this event has been <b>cancelled!</b></dd>
+		{% endif %}
+        {% if event.shortDescription.rstrip %}
+            <dt>Event</dt>
+            <dd>{{ event.shortDescription }}</dd>
+        {% endif %}
+		<dt>Location</dt>
+		<dd><a href="{{ event.location.get_absolute_url }}">{{ event.location }}</a></dd>
+		<dt>When</dt>
+		<dd>{{ event.time_string }}</dd>
+		{% if event.has_signups %}
+			<dt>Signups</dt>
+			<dd>
+				<span>{{ event.signup_set.count }}/{{ limit }}</span>
+			</dd>
+				<!--<dl class="signupdetals">-->
+					<dt>Fresher Signups Open</dt>
+					<dd {% if user.member.is_fresher %} class="activesignup" {% endif %}>{{ fresher }}</dd>
+					<dt>Member Signups Open</dt>
+					<dd {% if user.member.is_normal %} class="activesignup" {% endif %} >{{ open }}</dd>
+					<dt>Guest Signups Open</dt>
+					<dd {% if user.member.guest %} class="activesignup" {% endif %}>{{ guest }}</dd>
+					<dt>Signups Close</dt>
+					<dd>{{ close }}</dd>
+		{% endif %}
+		{% if event.longDescription.rstrip %}
+			<dt>Notes</dt>
+			<dd>{{ event.longDescription|textile }}</dd>
+		{% endif %}
+        {% with event.last_change_time as change_time %}
+            {% if change_time %}
+                <dt>Last Modified</dt>
+                <dd><p>{{ change_time }}</p></dd>
+            {% endif %}
+        {% endwith %}
+		<dt>General Information</dt>
+		<dd>{{ event.type.info|textile }}</dd>
+		{% if has_seating %}
+			<dt>Seating plan</dt>
+			<dd><a href="/events/seating/{{ event.id }}">View or edit seating plan</a></dd>
+		{% endif %}
+	</dl>
+	{% if event.has_signups %}
+		<div class="signups">
+			{% if can_signup %}
+				<form action="/events/signup/{{ event.id }}/" method="post" class="notsignedup">
+					<p>You are not signed up to this event, you may signup:</p>
+					<input class="commentfield" type="text" size="255" name="comment" />
+					<input type="submit" value="signup" />
+				</form>
+            {% else %}
+                {% if event.cancelled %}
+                    <li class="nosignups">You may not signup, since this event has been cancelled.</li>
+                {% endif %}
+			{% endif %}
+			{% if signed_up %}
+				<p class="signedup">You are signed up to this event, you may <a href="/events/unsignup/{{ event.id }}/">unsignup</a>, or <a href="/events/signup/{{ event.id }}/">edit</a> your signup comment.</p>
+			{% endif %}
+			<ul>
+				{% if signups %}
+					{% for signup in signups %}
+						<li class="signup"><ul>
+							<li class="username" title="{{signup.user.member.all_name}}">{{ signup.user.member.name }}</li>
+							<li class="time">{{ signup.time_form }}</li>
+							<li class="comment"><p>{{ signup.comment }}</p></li>
+						</ul></li>
+					{% endfor %}
+					{% for signup in reserved %}
+						<li class="reserved"><ul>
+							<li class="username" title="{{ signup.user.member.all_name }}">{{ signup.user.member.name }}</li>
+							<li class="time">{{ signup.time_form }}</li>
+							<li class="comment"><p>{{ signup.comment }}</p></li>
+						</ul></li>
+					{% endfor %}
+				{% else %}
+                    <li class="nosignups">There are no signups yet.</li>
+				{% endif %}
+			</ul>
+		</div>
+	{% endif %}
+</div>
+{% endif %}
+{% endblock %}
+

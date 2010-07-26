@@ -1,0 +1,253 @@
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+html, body, p, ul, ol, li, form, fieldset {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	font-size: 1em;
+	list-style: none;
+	border: 0;
+}
+
+input {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	font-size: 1em;
+}
+
+
+/* Set some defaults */
+
+body {
+	font-size: 0.85em;
+	font-family:"Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
+}
+		
+p {
+	line-height: 1.5em;
+}
+			
+/*** Layout ***/
+
+body, html {
+	height: 100%;
+}
+
+body {
+	margin: 0 auto;
+	min-width: 800px;
+	max-width: 1200px;
+	text-align: left;
+}
+
+html {
+	text-align: center;
+}
+
+#container {
+	min-height: 100%;
+	margin-bottom: -40px;
+}
+
+/* IE6 hack */
+* html #container {
+	height: 100%;
+}
+
+/* Footer */
+
+#footer-spacer {
+	height: 40px;
+	padding-top: 20px;
+	clear: both;
+}
+
+#footer {
+	height: 29px;
+	font-size: 0.8em;
+	text-align: right;
+	padding: 5px;
+}
+
+/* Header */
+
+#admin-header {
+	width: 100%;
+	padding-top: 20px;	
+	height: 140px;
+}
+
+#admin-header a {
+	color: #F0BC20;
+	text-decoration: underline;
+}
+
+#admin-header a:hover {
+	color: #46B;
+	text-decoration: none;
+}
+
+#admin-header #menu a:hover {
+	color: #ddd;
+}
+
+/* Logo */
+
+#logo {
+	padding-left: 30px;
+}
+
+#logo img {
+	vertical-align: top;
+}
+
+#logo h1 {
+	display: inline;
+}
+
+/* Top right box */
+
+#top-right {
+	float: right;
+	padding-right: 30px;
+	text-align: right;
+}
+			
+/* Search box */
+
+#top-right input {
+	width: 170px;
+	margin-top: 10px;
+	padding-left: 20px;
+	background: #181818 url(/static/img/magnifier.png) no-repeat 2px center;
+	border: 1px solid #888;
+}
+
+/* Menu */
+
+#menu {
+	margin-top: -20px;
+	float: right;
+	padding-right: 30px;
+}
+
+#menu ul {
+	list-style: none;
+}
+
+#menu li {
+	display: inline;
+}
+
+#menu a {
+	display: block;
+	float: left;
+	margin-left: 20px;
+	text-decoration: none;
+	font-size: 1.36em;
+	color: #ddd;
+	padding: 4px 0px 4px 0px;
+}
+
+
+#menu a:hover, .active a {
+	border-bottom: 3px solid #ddd;
+}
+	
+/* Page layout */
+
+#page {
+	margin-top: 30px;
+	margin-left: 30px;
+}
+
+#content {
+	margin-right: 260px;
+}
+
+/* Admin page elements */
+
+#actions h2 {
+	float: left;
+	width: 150px;
+	padding-left: 10px;
+}
+
+#actions ul {
+	float: left;
+	display: inline;
+	margin: 0;
+	padding: 18px 0 0 0;
+}
+#actions li {
+	display: inline;
+	padding-left: 10px;
+	font-size: 1.2em;
+}
+
+.login #menu, .login #top-right, .login #footer {
+	display: none;
+}
+.login #container, body.login {
+	height: auto !important;
+}
+.login #logo img {
+	padding-right: 10px;
+}
+
+/* Colours */
+
+body {
+	background-color: #fff;
+}
+html {
+	background-color: #444;
+}
+a {
+	color: #F0BC20;
+}
+a:hover {
+	text-decoration: none;
+	color: #46B;
+}
+input, input, textarea, select{
+	border: 1px solid #888;
+}
+
+#footer, #container {
+	border-right: 1px solid #888;
+	border-left: 1px solid #888;
+}
+#container {
+	background-color: #fff;
+	position: static;
+}
+
+#footer {
+	border-top: 1px solid #aaa;
+	background-color: #111;
+	color: #aaa;
+	clear: none;
+}
+
+#admin-header {
+	border-bottom: 1px solid #aaa;
+	background-color: #111;
+	color: #ddd;
+}
+
+/* Misc */
+
+#page input, select {
+	background-color: #FFF;
+	color: #000;
+}
+
+#requests {
+    float:right;
+}

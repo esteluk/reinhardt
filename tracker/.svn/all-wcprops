@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/repos/reinhardt/!svn/ver/593/tracker
+END
+admin.py
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/repos/reinhardt/!svn/ver/593/tracker/admin.py
+END
+views.py
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/repos/reinhardt/!svn/ver/593/tracker/views.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/reinhardt/!svn/ver/130/tracker/__init__.py
+END
+signals.py
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/reinhardt/!svn/ver/151/tracker/signals.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/reinhardt/!svn/ver/427/tracker/models.py
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repos/reinhardt/!svn/ver/571/tracker/urls.py
+END

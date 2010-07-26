@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/repos/reinhardt/!svn/ver/567/tournaments
+END
+admin.py
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/reinhardt/!svn/ver/557/tournaments/admin.py
+END
+views.py
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/reinhardt/!svn/ver/557/tournaments/views.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/reinhardt/!svn/ver/538/tournaments/__init__.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/reinhardt/!svn/ver/567/tournaments/models.py
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/reinhardt/!svn/ver/557/tournaments/urls.py
+END

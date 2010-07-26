@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/repos/reinhardt/!svn/ver/589/templates/events
+END
+nonsignup.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/reinhardt/!svn/ver/245/templates/events/nonsignup.html
+END
+alreadysignedup.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/reinhardt/!svn/ver/245/templates/events/alreadysignedup.html
+END
+plan_closed.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/reinhardt/!svn/ver/245/templates/events/plan_closed.html
+END
+lan_friends.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/reinhardt/!svn/ver/404/templates/events/lan_friends.html
+END
+details.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/reinhardt/!svn/ver/515/templates/events/details.html
+END
+location_detail.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/reinhardt/!svn/ver/424/templates/events/location_detail.html
+END
+seating.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/reinhardt/!svn/ver/589/templates/events/seating.html
+END
+seating_size_failure.html
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/reinhardt/!svn/ver/398/templates/events/seating_size_failure.html
+END
+activity.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/reinhardt/!svn/ver/531/templates/events/activity.html
+END
+nonevent.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/reinhardt/!svn/ver/245/templates/events/nonevent.html
+END
+comment_fail.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/reinhardt/!svn/ver/383/templates/events/comment_fail.html
+END
+signup.html
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/reinhardt/!svn/ver/245/templates/events/signup.html
+END
+unsignup.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/reinhardt/!svn/ver/245/templates/events/unsignup.html
+END
+calendar.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/reinhardt/!svn/ver/352/templates/events/calendar.html
+END
+future.html
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/reinhardt/!svn/ver/200/templates/events/future.html
+END
+edit_signup.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/reinhardt/!svn/ver/245/templates/events/edit_signup.html
+END
+base.html
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/reinhardt/!svn/ver/433/templates/events/base.html
+END
+cantsignup.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/reinhardt/!svn/ver/245/templates/events/cantsignup.html
+END
+list.html
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/reinhardt/!svn/ver/524/templates/events/list.html
+END

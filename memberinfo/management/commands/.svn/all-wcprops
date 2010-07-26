@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/reinhardt/!svn/ver/597/memberinfo/management/commands
+END
+mailman_import.py
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/reinhardt/!svn/ver/269/memberinfo/management/commands/mailman_import.py
+END
+populate.py
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/reinhardt/!svn/ver/572/memberinfo/management/commands/populate.py
+END
+email_password.py
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/reinhardt/!svn/ver/416/memberinfo/management/commands/email_password.py
+END
+import.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/reinhardt/!svn/ver/298/memberinfo/management/commands/import.py
+END
+newsitem.py
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/reinhardt/!svn/ver/414/memberinfo/management/commands/newsitem.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/reinhardt/!svn/ver/12/memberinfo/management/commands/__init__.py
+END
+update.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/reinhardt/!svn/ver/597/memberinfo/management/commands/update.py
+END
+email_all_passwords.py
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/reinhardt/!svn/ver/367/memberinfo/management/commands/email_all_passwords.py
+END
+mailman_validate.py
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/reinhardt/!svn/ver/269/memberinfo/management/commands/mailman_validate.py
+END

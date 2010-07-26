@@ -1,0 +1,317 @@
+/* Event list */
+
+/* IE6 gets upset without this */
+#eventlist  {
+	width: 100%;
+	-margin-left: -3px;
+}
+
+ul#eventlist, #eventlist ul {
+	line-height: 2em;
+}
+
+#eventlist .week {
+	width: 100%;
+	background-color: #333;
+	overflow: hidden;
+}
+
+#eventlist li {
+	display: block;
+}
+
+#eventlist .fullweek {
+	float: right;
+	text-align: right;
+	width: 100%;
+	margin-right: -90px;
+}
+
+#eventlist .weekno {
+	float: left;
+	width: 90px;
+}
+
+#eventlist .weekno, #eventlist .fullweek {
+	border-top: 1px solid #222;
+	background-color: #444;
+}
+
+/* Another IE6 fix */
+#eventlist li li {
+	-height: 2em;
+	min-height: 2em;
+}
+
+#eventlist .events {
+	clear: both;
+}
+
+#eventlist li.name {
+	border-top: 1px solid #222;
+}
+
+#eventlist .events .name a {
+	display: block;
+	width: 150px;
+	float: left;
+	padding: 15px;
+	font-size: 1.2em;
+}
+
+.eventpast {
+	background-color: #333;
+	color: #666;
+}
+
+.eventpast a {
+	color: #866609;
+}
+
+.eventpast a:hover {
+	color: #2F4783;
+}
+
+#eventlist .events .eventdetail {
+	margin-left: 180px;
+}
+
+#eventlist .events .description {
+	font-size: 1.2em;
+	padding-bottom: 5px;
+}
+
+#eventlist .weekno span {
+	padding-left: 10px;
+}
+
+#eventlist .fullweek span {
+	padding-right: 100px;
+}
+
+#eventlist .signups {
+	position: absolute;
+	margin-left: -160px;
+	margin-top: -10px;
+}
+
+#eventlist .time {
+	font-size: 0.8em;
+}
+
+
+/* Calendar */
+
+#calendar th {
+	font-size: 1.1em;
+	font-weight: bold;
+	background-color:#444;
+	text-align: center;
+    border-right:1px solid #222222;
+    border-left:1px solid #222222;
+}
+
+#calendar td {
+	height: 5em;
+	width: 10em;
+	background-color: #333;
+	vertical-align: top;
+	padding: 5px;
+    border:1px solid #222222;
+}
+
+#calendar tr {
+	clear: both;
+}
+
+#calendar .day {
+	float: right;
+}
+
+#calendar .week {
+	float: left;
+}
+
+#calendar li {
+	display: block;
+	line-height: 1.1em;
+	margin-bottom: 5px;
+}
+
+#calendar .event {
+	clear: both;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.gaming a, .gaming {
+	color: green;
+}
+
+.academic a, .academic {
+	color: #FF8040;
+}
+
+.social a, .social {
+	color: #800000;
+}
+
+.society a, .society {
+	color: #FF0080;
+}
+
+
+.calendar-key {
+	text-align:right;
+}
+
+.calendarnav li {
+	display: block;
+	list-style-type: none;
+}
+
+.calendarnav {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.calendarnav .prev {
+	float: left;
+}
+
+.calendarnav .cur {
+	margin: 0 auto;
+}
+
+.calendarnav .next{
+	float: right;
+}
+
+/* Event Details */
+
+.signups p {
+	margin: 0;
+}
+
+#event dl.signupdetals {
+	padding: 5px;
+}
+
+#event dd.activesignup {
+	color:#FF8040;
+}
+
+
+/* IE6 fix again */
+#event .signups {
+	width: 100%;
+	-margin-left: -3px;
+	clear: left;
+}
+
+#event .signedup {
+	text-align: center;
+	background-color: #333;
+	margin-bottom: 0px;
+}
+
+#event .notsignedup {
+	text-align: center;
+	background-color: #333;
+	padding: 10px;
+}
+#event .notsignedup p, #event .notsignedup input {
+	margin: 5px;
+	line-height: 1em;
+}
+#event .notsignedup .commentfield {
+	width: 60%;
+}
+
+#event .signups ul {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	overflow: hidden;
+	background-color: #444;
+}
+
+#event .signups li {
+	display: block;
+	list-style-type: none;
+}
+
+#event .signups .username {
+	float: left;
+	width: 180px;
+	padding: 10px;
+	font-weight: bold;
+}
+
+#event .signups .comment {
+	float: right;
+	width: 100%;
+	margin-right: -210px;
+	background-color: #333;
+	padding-left: 10px;
+    min-height:10px;
+}
+
+#event .signups .comment p {
+	padding-right: 220px;
+	margin: 0;
+}
+
+#event .signups .time {
+	width: 200px;
+	float: right;
+	width: 100%;
+	margin-right: -210px;
+	font-size: 0.8em;
+	background-color: #333;
+	padding-left: 10px;
+}
+
+#event .signup, #event .signedup, #event .notsignedup, #event .reserved {
+	border-bottom: 1px solid #222;
+}
+
+#event .reserved {
+	color: #888;
+}
+
+#event .nosignups {
+	padding: 10px;
+}
+
+.signup li {
+	padding: 5px 0;
+}
+
+.reserved li {
+	padding: 5px 0;
+}
+
+.eventhidden {
+    background-color: #870606;
+}
+
+.eventrunning a, .eventrunning {
+	background-color: #2264ae;
+}
+
+.eventhidden a, .eventhidden {
+	background-color: #870606;
+}
+
+#event .details li {
+	line-height: 1.35em;
+	padding-left: 5px;
+	margin-left: 30px;
+}
+
+#event .details ul li {
+	list-style-type: square !important;
+}
+

@@ -1,0 +1,27 @@
+{% extends "tracker/base.html" %}
+
+{% block sidebar-outer %}{% endblock %}
+
+{% block ttitle %}New Issue{% endblock %}
+
+{% block content %}
+    <h2>Create New Issue</h2>
+  
+    <p>To submit bug reports for the Compsoc website, use <a href="http://trac.uwcs.co.uk/reinhardt/">Trac</a>. To obtain a user account on Trac, ask in #tech on irc.</p>
+ 
+    <fieldset style="width:450px">
+        <form action="/tickets/new/" method="POST">
+            <br />
+            <table>
+                {% for field in form %}
+                    <tr>
+                        <td>{{ field.label_tag }} </td>
+                        <td>{{ field }}</td>
+                        <td>{{ field.errors }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <p class="submit"><input type="submit" value="submit" /></p>
+        </form>
+    </fieldset>
+{% endblock %}

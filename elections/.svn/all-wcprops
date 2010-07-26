@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/repos/reinhardt/!svn/ver/600/elections
+END
+admin.py
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/reinhardt/!svn/ver/577/elections/admin.py
+END
+views.py
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/reinhardt/!svn/ver/600/elections/views.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/reinhardt/!svn/ver/577/elections/__init__.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/reinhardt/!svn/ver/579/elections/models.py
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/reinhardt/!svn/ver/591/elections/urls.py
+END

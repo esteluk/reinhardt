@@ -1,0 +1,2 @@
+<p>Title: {{ obj.title }}</p>
+<p>Comment: {{ obj.comment }}</p>

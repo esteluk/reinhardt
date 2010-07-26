@@ -1,0 +1,5 @@
+{% if obj.shortDescription %}
+	{{ obj.type.name }}: {{ obj.shortDescription }}
+{% else %}
+	{{ obj.type.name }}
+{% endif %}

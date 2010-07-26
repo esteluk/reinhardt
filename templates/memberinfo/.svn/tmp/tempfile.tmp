@@ -1,0 +1,187 @@
+{% extends "memberinfo/base.html" %}
+
+{% block morehead %}
+    <script type="text/javascript">
+        function flip(block_id,arrow_id) {
+            var style = document.getElementById(block_id).style;
+            var arrow = document.getElementById(arrow_id);
+            if(style.display == 'none') {
+                style.display = 'block';
+                arrow.innerHTML = '&#x21E9;&nbsp;';
+            } else {
+                style.display = 'none';
+                arrow.innerHTML = '&#x21E8;&nbsp;';
+            }
+        }
+    </script>
+{% endblock %}
+
+
+{% block sidebar %}
+	<ul>
+		<li><h2>Actions</h2>
+	    <ul>
+	        <li><a href="/password/">Change Website Password</a></li>
+	        {% if shell.isPresent %}
+               <li><a 
+                href="/member/reset/shell/"
+                onclick="return confirm('Are you sure you want to reset your shell password?')">
+                Request Shell Password Reset
+               </a><li>
+	        {% endif %}
+	        {% if db.isPresent %}
+               <li><a 
+                href="/member/reset/db/"
+                onclick="return confirm('Are you sure you want to reset your database password?')">
+                Request Database Password Reset
+               </a><li>
+	        {% endif %}
+	    </ul></li>
+	    <li><h2>Links</h2>
+	    <ul>
+	        <li><a href="/member/list/">List of Members</a></li>
+	    </ul></li>
+	</ul>
+{% endblock %}
+
+{% block content %}
+<div id="profile">
+<h2>Profile</h2>
+
+    <a onClick="flip('shell','sh')">
+        <h4><div id="sh" style="display:inline">&#x21E8;&nbsp;</div>Shell Account</h4>
+    </a>
+    <div id="shell" style="display:none">
+    {% if shell %}
+        {% if shell.isPresent %}
+            <p>You have a shell account with the username "{{ shell.name }}"</p>
+        {% else %} {% if shell.isDisabled %}
+            <p>Your shell account "{{ shell.name }}" is currently disabled</p>
+        {% else %}
+            <p>You have requested a shell account with the username "{{ shell.name }}"</p>
+        {% endif %}{% endif %}
+    {% else %}
+        <p>You don't have a shell account, you may request one here.</p>
+        <p>Note: Usernames can only consist of lower case letters and numbers!</p>
+        <form action="/member/shell/" method="post">
+            {{ shell_form.as_p }}
+            <input type="submit" value="request" />
+        </form>
+    {% endif %}
+    <hr />
+    </div>
+
+    <a onClick="flip('db','dh')">
+        <h4><div id="dh" style="display:inline">&#x21E8;&nbsp;</div>Database Account</h4>
+    </a>
+    <div id="db" style="display:none">
+    {% if db %}
+        {% if db.isPresent %}
+            <p>You have a database account with the username "{{ db.name }}"</p>
+        {% else %}{% if db.isDisabled %}
+            <p>Your database account is currently disabled</p>
+        {% else %}
+            <p>You have requested a database account with the username "{{ db.name }}"</p>
+        {% endif %}{% endif %}
+    {% else %}
+        <p>You don't have a database account, you may request one here.</p>
+        <form action="/member/database/" method="post">
+            {{ db_form.as_p }}
+            <input type="submit" value="request" />
+        </form>
+    {% endif %}
+    <hr />
+    </div>
+
+    <a onClick="flip('quota','qh')">
+        <h4><div id="qh" style="display:inline">&#x21E8;&nbsp;</div>Quota</h4>
+    </a>
+    <div id="quota" style="display:none">
+    <p>This is the quota related to your shell account.  Your total quota is {{ total_quota }}MB.  The current base quota is 1000MB and you have additionally bought {{ quota }}
+    blocks of extra quota.</p>
+    {% if req_quota %}
+        <p>You have {{ req_quota }}MB of quota on request.</p>
+    {% endif %}
+    <p>Disk quota currently costs £2.50 for 1000MB and more can be requested here.
+    The society treasurer will contact you, in order to obtain payment.</p>
+    <form action="/member/quota/" method="post">
+        {{ quota_form.as_p }}
+        <input type="submit" value="request" />
+    </form>
+    <hr />
+    </div>
+
+    <a onClick="flip('lists','lh')">
+        <!--
+        <h4><div id="lh" style="display:inline">&#x21E8;&nbsp;</div>Mailing Lists</h4>
+    </a>
+    <div id="lists" style="display:none">
+    <form action="/member/lists/" method="post">
+    {% for list in my_lists %}
+        <p>
+            {{ list }}
+            <input id="id_{{ list }}" type="checkbox" name="{{ list }}" checked="yes" />
+        </p>
+    {% endfor %}
+    {% for list in other_lists %}
+        <p>
+            {{ list }}
+            <input id="id_{{ list }}" type="checkbox" name="{{ list }}"/>
+        </p>
+    {% endfor %}
+    <input type="submit" value="set" />
+    </form>
+    <hr />
+    </div>
+    -->
+
+    <a onClick="flip('web','wh')">
+        <h4><div id="wh" style="display:inline">&#x21E8;&nbsp;</div>Website Details</h4>
+    </a>
+    <div id="web" style="display:none">
+    <p>Your nickname will be used throughout the site to identify you, e.g. on the
+    list of signups for an event. If you don't specify a nickname, your real name
+    will be used instead. </p>
+    <form action="/member/nickname/" method="post">
+        {{ name_form.as_p }}
+        <input type="submit" value="submit" />
+    </form>
+    <hr />
+    <p>Your nickname (or real name) and website (URL and title)
+    will appear on the member list page (and any other public list of members) only
+    if you allow the details to be published.</p>
+    <form action="/member/website/" method="post">
+        <table class="form">
+            {{ website_form.as_table }}
+        </table>
+        <input type="submit" value="submit" />
+    </form>
+    <hr />
+    <form action="/member/publish/" method="post">
+        <table class="form">
+            {{ publish_form.as_table }}
+        </table>
+        <input type="submit" value="submit" />
+    </form>
+    <hr />
+    </div>
+
+    <a onClick="flip('game','gh')">
+    	<h4><div id="gh" style="display:inline">&#x21E8;&nbsp;</div>Gaming IDs</h4>
+    </a>
+    <div id="game" style="display:none">
+    <p>Here you can optionally include a list of your nicknames and identities on
+    other gaming sites across the internet. People will be able to view these
+    publically and add you as a contact there.</p>
+    <form action="/member/gamingids/" method="post">
+    	<table class="form">
+	    {{ gameid_form.as_table }}
+	</table>
+	<input type="submit" value="submit" />
+    </form>
+    <hr />
+    </div>
+</div>
+{% endblock %}
+
+

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/repos/reinhardt/!svn/ver/596/templates
+END
+password.html
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/reinhardt/!svn/ver/266/templates/password.html
+END
+search.html
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/reinhardt/!svn/ver/392/templates/search.html
+END
+404.html
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/reinhardt/!svn/ver/252/templates/404.html
+END
+login.html
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repos/reinhardt/!svn/ver/593/templates/login.html
+END
+logout.html
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/reinhardt/!svn/ver/554/templates/logout.html
+END
+base.html
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repos/reinhardt/!svn/ver/571/templates/base.html
+END

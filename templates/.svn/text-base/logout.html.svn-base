@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block sidebar-outer %}{% endblock %}
+
+{% block next %}/{% endblock %}
+
+{% block content %}
+ <p class="notification">{{ title }}</p>
+{% endblock %}

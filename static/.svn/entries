@@ -1,0 +1,40 @@
+9
+
+dir
+605
+http://svn.uwcs.co.uk/repos/reinhardt/static
+http://svn.uwcs.co.uk/repos/reinhardt
+
+
+
+2010-02-24T01:01:13.676487Z
+598
+monk
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+1733f6c1-c1e2-44d5-a428-f18fd92aa0f0
+
+css
+dir
+
+content
+dir
+
+img
+dir
+
+js
+dir
+

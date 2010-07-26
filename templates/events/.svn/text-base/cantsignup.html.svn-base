@@ -1,0 +1,16 @@
+{% extends "events/base.html" %}
+
+{% block content %}
+<p class="notification">You can't yet signup to {{ event.type.name }}.</p>
+{% endblock %}
+
+{% block sidebar %}
+    <ul>
+        <li>
+            <h2>Event</h2>
+            <ul>
+                <li><a href="/events/details/{{ event.id }}/">Back to event</a></li>
+            </ul>
+        </li>
+	</ul>
+{% endblock %}

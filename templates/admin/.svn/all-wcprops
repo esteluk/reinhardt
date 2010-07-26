@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repos/reinhardt/!svn/ver/593/templates/admin
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/reinhardt/!svn/ver/584/templates/admin/index.html
+END
+login.html
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/reinhardt/!svn/ver/585/templates/admin/login.html
+END
+base.html
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repos/reinhardt/!svn/ver/569/templates/admin/base.html
+END

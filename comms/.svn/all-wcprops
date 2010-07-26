@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/repos/reinhardt/!svn/ver/599/comms
+END
+admin.py
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/repos/reinhardt/!svn/ver/599/comms/admin.py
+END
+views.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/repos/reinhardt/!svn/ver/2/comms/views.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repos/reinhardt/!svn/ver/2/comms/__init__.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repos/reinhardt/!svn/ver/447/comms/models.py
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/repos/reinhardt/!svn/ver/541/comms/urls.py
+END

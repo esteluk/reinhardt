@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% load markup %}
+
+{% block ttitle %}{{ title }}{% endblock %}
+
+{% block contact %}
+    {% ifequal slug "contact" %}
+        class="active"
+    {% endifequal %}
+{% endblock %}
+
+{% block about %}
+    {% ifnotequal slug "contact" %}
+        class="active"
+    {% endifnotequal %}
+{% endblock %}
+
+{% block sidebar %}
+    <ul>
+        <li>
+            <h2>Browse</h2>
+
+		<ul class="cms">
+
+		    {% for page_url,name in breadcrumbs %}
+			{% if not forloop.first %}
+			    {% if not forloop.last %}
+				<li>&rsaquo;&nbsp;<a href="{{ page_url }}">{{ name }}</a>
+                <ul>
+			    {% endif %}
+			{% endif %}
+		    {% endfor %}
+
+		    {% for page_url,name,marked in siblings %}
+            {% if marked %}
+				<li>&rsaquo;&nbsp;{{ name }}</li>
+                {% if children %}
+                    <ul>
+                    {% for page_url,name in children %}
+                        <li>&rsaquo;&nbsp;<a href="{{ page_url }}">{{ name }}</a></li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+            {% else %}
+                <li>&rsaquo;&nbsp;<a href="{{ page_url }}">{{ name }}</a></li>
+            {% endif %}
+		    {% endfor %}
+
+		    {% for a,b in breadcrumbs %}
+			{% if not forloop.first %}{% if not forloop.last %}</ul></li>{% endif %}{% endif %}
+		    {% endfor %}
+		</ul>
+	 </li>
+    </ul>
+    <ul>
+        <li><a href="/info_map/">Site Information Map</a></li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+	<div class="post">
+		{% if user.is_staff %}<a class="edit" href="/admin/cms/page/add/?slug={{slug}}/newpage">add child page</a><a class="edit" href="/admin/cms/page/{{ page_id }}/">edit</a> <a class="edit" href="attachment">attachments</a>{% endif %}
+		<h2 class="title">{{ title }}</h2>
+		<div class="entry">
+			{{ text|textile }}
+		</div>
+	</div>
+{% endblock%}

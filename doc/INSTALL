@@ -1,0 +1,5 @@
+Install (at least) the following:
+ * python-django
+ * python-vobject
+ * python-markdown
+ * jquery

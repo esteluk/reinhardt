@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/reinhardt/!svn/ver/305/templates/admin/memberinfo
+END
+guest_reject_email
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/reinhardt/!svn/ver/92/templates/admin/memberinfo/guest_reject_email
+END
+guest_accept_email
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/reinhardt/!svn/ver/92/templates/admin/memberinfo/guest_accept_email
+END

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block morehead %}
+    <link href="/static/css/bracket.css" rel="stylesheet" type="text/css" media="screen" />
+{% endblock %}
+
+
+{% block sidebar %}
+    <ul>
+        <li>
+            <h2>Tournaments</h2>
+            <ul>
+                <li><a href="/tournaments/">Tournament List</a></li>
+            </ul>
+        </li>
+{% endblock %}
