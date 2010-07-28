@@ -16,7 +16,7 @@ from compsoc.settings import *
 
 from datetime import datetime
 
-from compsoc.recaptcha.client import captcha
+from recaptcha.client import captcha
 
 '''
 The following views are all related to the member profile section of the website.
@@ -60,9 +60,16 @@ def index(request):
             'xbox':gameids.xboxID,
             'psn':gameids.psnID,
             'xfire':gameids.xfireID,
+			'raptr':gameids.raptrID,
         })
     except GamingIDs.DoesNotExist:
         gameid_form = GameidForm()
+
+	try:
+		profiledata = u.membermetadata
+		profile_form = ProfileForm()
+	except MemberMetadata.DoesNotExist:
+		profile_form = ProfileForm()
 
     my_lists = u.mailinglist_set.all()
     other_lists = []
@@ -83,6 +90,7 @@ def index(request):
         'website_form':website_form,
         'publish_form': PublishForm(initial={'publish':u.member.showDetails}),
         'gameid_form':gameid_form,
+		#'profile_form':profile_form,
         'my_lists':my_lists,
         'other_lists':other_lists,
     },context_instance=RequestContext(request,{},[path_processor]))
@@ -265,6 +273,19 @@ def set_gameids(request):
             'all_errors':form.errors.items(),
         },context_instance=RequestContext(request,{},[path_processor]))
 
+def set_profiledata(request):
+	u = request.user
+	if request.method == 'post':
+		form = ProfileForm(request.POST, request.FILES)
+		if form.is_valid():
+			profiledata.profile_picture = request.FILES['file']
+			return HttpResponseRedirect('/member/')
+		else:
+			return render_to_response('memberinfo/form_errors.html',{
+				'name': 'Profime image',
+				'all_errors':form.errors.items(),
+			},context_instance=RequestContext(request,{},[path_processor]))
+
 '''
 End of Member Profile Section
 '''
@@ -406,9 +427,20 @@ def profiles(request,userid):
 	    profile = {'name': u.get_full_name(),}
 	
 	try:
+		profile['profile_img'] =  u.membermetadata.profile_picture
+		profile['profile_quote'] = u.membermetadata.profile_quote
+	except MemberMetadata.DoesNotExist:
+		profile['profile_img'] = 'http://vcc.static-cap.com/images/profile-default.png?1275442168'
+	
+	try:
 	    profile['nickname'] = u.nicknamedetails.nickname
 	except NicknameDetails.DoesNotExist:
 	    profile['nickname'] = ""
+
+	try:
+		profile['joined'] = u.memberjoin.year
+	except u.MemberJoin.DoesNotExist:
+		profile['joined'] = 0
 
 	try:
 	    profile['website_url'] = u.websitedetails.websiteUrl

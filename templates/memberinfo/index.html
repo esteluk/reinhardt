@@ -181,6 +181,15 @@
     </form>
     <hr />
     </div>
+
+	<div id="profile" style="display: none">
+	<p>Willing to share? Spill all.</p>
+	<form action="memberinfo/setprofile" method="post">
+		<table class="form">
+		{{ profiledata_form.as_table }}
+		</table>
+	<input type="submit" value="submit" />
+	</form>
 </div>
 {% endblock %}
 

@@ -573,3 +573,136 @@ pre {
 .errorlist li {
     background-color: red;
 }
+
+#profilecontainer {
+	padding: 20px;
+	margin: 0 auto;
+	border: 1px solid black;
+	background-color: #333;
+	min-height: 240px;
+}
+
+#profilecontainer .profilepic {
+	width: 200px;
+	float: left;
+	margin-right: 50px;
+}
+
+#personal .nickname {
+	font-size: 32px;
+	color: #666;
+}
+
+#personal .name {
+	font-size: 58px;
+	display: inline;
+}
+
+#personal .joined {
+	display: inline;
+}
+
+#personal .quote {
+	display: block;
+	margin-left: 15em;
+	margin-bottom: 1em;
+	background-image: url('/static/img/quote_open.png');
+	font-size: 1.5em;
+	background-repeat: no-repeat;
+	padding: 5px 0px 0px 20px;
+	color: #999;
+}
+
+#personal .website {
+	display:inline-block;
+	margin-left: 5em;
+}
+
+#personal {
+	padding: 50px 0px;
+}
+
+#gameprofile {
+	clear: both;
+	display: table;
+	margin: 30px 50px;
+}
+
+.verticalmenuheadercontent {
+	display: block;
+	-moz-transform:rotate(-270deg); 
+	-webkit-transform: rotate(-270deg);
+	-o-transform: rotate(-270deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	width: 10em;
+	height: 3em;
+	line-height: 3em;
+	position: absolute;
+	top: 6.5em;
+	left: -3.5em;
+	color: black;
+}
+
+.verticalmenuheader {
+	display: block;
+	height: 16em;
+	width: 3em;
+	border-left: 0;
+	vertical-align: middle;
+	text-align: center;
+	position: relative;
+	border-width: 2px 2px 2px 0px;
+	border-style: solid;
+	border-color: black;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-radius-topright: 10px;
+	-moz-border-radius-bottomright: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-color: #999;
+}
+
+.tab { 
+	display: inline-block;
+	background-image: url('/static/img/vertborder.png');
+	background-repeat: repeat-x;
+	background-size: auto 100%;
+	background-color: #333;
+}
+
+.gamedetailentry {
+	display: inline-block;
+	height: 16em;
+	border-width: 2px 0px;
+	border-style: solid;
+	border-color: black;
+	background-color: #999;
+	vertical-align: top;
+	width: 550px;
+	background-image: url('/static/img/999gradient333.png');
+}
+
+.xblgamercard {
+	display: block;
+	border: 0;
+	margin: 2em auto;
+}
+.psncard {
+	display:block;
+	border: 0;
+	margin: 2em auto;
+}
+#steamprofile {
+	border-left: 2px solid black;
+}
+
+#xboxprofile {
+}
+#steamtab {
+	border-left: 2px solid black;
+}
+#psntab {
+	background-image: none;
+}
+/* fix to "old" with .tab, .gamedetailentry {display: table-cell;}; */

@@ -58,14 +58,20 @@ class NicknameDetails(models.Model):
 
 class GamingIDs(models.Model):
     user = models.OneToOneField(User)
-    steamID = models.CharField(max_length=50)
-    xboxID = models.CharField(max_length=50)
-    psnID = models.CharField(max_length=50)
-    xfireID = models.CharField(max_length=50)
+    steamID = models.CharField(max_length=50, blank=True)
+    xboxID = models.CharField(max_length=50, blank=True)
+    psnID = models.CharField(max_length=50, blank=True)
+    raptrID = models.CharField(max_length=50, blank=True)
+    xfireID = models.CharField(max_length=50, blank=True)
+
+class MemberMetadata(models.Model):
+	user = models.OneToOneField(User)
+	profile_quote = models.CharField(max_length=50, blank=True)
+	profile_picture = models.ImageField(upload_to="profileimgs/", blank=True, null=True)
 
 class MemberJoin(models.Model):
     '''Stores history of membership'''
-    user = models.ForeignKey(User)
+    user = models.OneToOneField(User)
     year = models.IntegerField()
 
     def __unicode__(self):

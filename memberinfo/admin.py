@@ -11,6 +11,12 @@ class MemberInline(admin.StackedInline):
 class WebsiteDetailsInline(admin.StackedInline):
     model = WebsiteDetails
 
+class GamingIDsInline(admin.StackedInline):
+	model = GamingIDs
+
+class MemberMetadataInline(admin.StackedInline):
+	model = MemberMetadata
+
 class NicknameDetailsInline(admin.StackedInline):
     model = NicknameDetails
 
@@ -23,10 +29,16 @@ class DatabaseAccountInline(admin.StackedInline):
 class QuotaInline(admin.TabularInline):
     model = Quota
 
+class MemberJoinInline(admin.StackedInline):
+	model = MemberJoin
+
 class MyUserAdmin(UserAdmin):
     inlines = [MemberInline,
                NicknameDetailsInline,
                WebsiteDetailsInline,
+			   GamingIDsInline,
+			   MemberMetadataInline,
+			   MemberJoinInline,
                ShellAccountInline,
                DatabaseAccountInline,
                QuotaInline,]

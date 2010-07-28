@@ -1,4 +1,5 @@
 *.pyc
 ._*
 settings.py
+compsoc.db
 /django_restapi/

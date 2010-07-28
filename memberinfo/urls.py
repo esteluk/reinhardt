@@ -15,6 +15,7 @@ urlpatterns = patterns('compsoc.memberinfo.views',
     (r'^website/$','set_website'),
     (r'^publish/$','set_publish'),
     (r'^gamingids/$','set_gameids'),
+	(r'^setprofile/$', 'set_profiledata'),
     (r'^profile/(?P<userid>\d+)/$','profiles'),
 )
 

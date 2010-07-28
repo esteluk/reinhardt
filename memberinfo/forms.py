@@ -35,6 +35,9 @@ class GameidForm(forms.Form):
     psn = forms.CharField(required=False)
     xfire = forms.CharField(required=False)
 
+class ProfileForm(forms.Form):
+	profileimg = forms.ImageField()
+
 class PublishForm(forms.Form):
     publish = forms.BooleanField(label='Publish Details',required=False)
 
