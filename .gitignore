@@ -3,3 +3,4 @@
 settings.py
 compsoc.db
 /django_restapi/
+/static/profileimgs/*
