@@ -18,6 +18,8 @@ from datetime import datetime
 
 from recaptcha.client import captcha
 
+from xml.etree.ElementTree import parse
+
 '''
 The following views are all related to the member profile section of the website.
 '''
@@ -412,6 +414,11 @@ def create_guest(request):
     })
 
 def profiles(request,userid):
+
+#	STEAM_URL = 'http://steamcommunity.com/id/%s/?xml=1'
+#	url = STEAM_URL % u.gamingids.steamID
+#	rss = parse(urllib.urlopen(url)).getroot()
+
     try:
 	u = User.objects.get(id__exact=userid)
         try:
@@ -427,7 +434,7 @@ def profiles(request,userid):
 	    profile = {'name': u.get_full_name(),}
 	
 	try:
-		profile['profile_img'] =  u.membermetadata.profile_picture
+		profile['profile_img'] =  MEDIA_URL + str(u.membermetadata.profile_picture)
 		profile['profile_quote'] = u.membermetadata.profile_quote
 	except MemberMetadata.DoesNotExist:
 		profile['profile_img'] = 'http://vcc.static-cap.com/images/profile-default.png?1275442168'

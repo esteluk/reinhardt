@@ -9,7 +9,7 @@
 {% block content %}
 
 <div id="profilecontainer">
-	<img src="{{ MEDIA_URL }}{{ profile_img }}" alt="{{ nickname }}'s  mug" class="profilepic" />
+	<img src="{{ profile_img }}" alt="{{ nickname }}'s  mug" class="profilepic" />
 	<div id="personal">
 	<h1 class="name">{{ name }}</h1>
 	{% if nickname %}<span class="nickname">{{ nickname }}</span>{% endif %}
