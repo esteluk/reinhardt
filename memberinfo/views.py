@@ -18,7 +18,9 @@ from datetime import datetime
 
 from recaptcha.client import captcha
 
+from collections import defaultdict
 from xml.etree.ElementTree import parse
+import urllib
 
 '''
 The following views are all related to the member profile section of the website.
@@ -413,54 +415,82 @@ def create_guest(request):
         'public_key':RECAPTCHA_PUB_KEY,
     })
 
+class SteamGame:
+	def __init__(self, e):
+		self.name = e.findtext('gameName')
+		self.logo = e.findtext('gameLogo')
+		self.icon = e.findtext('gameIcon')
+		self.hours = e.findtext('hoursPlayed')
+		self.total = e.findtext('hoursOnRecord')
+
 def profiles(request,userid):
 
-#	STEAM_URL = 'http://steamcommunity.com/id/%s/?xml=1'
-#	url = STEAM_URL % u.gamingids.steamID
-#	rss = parse(urllib.urlopen(url)).getroot()
+	try:
+		n = 0
+		u = User.objects.get(id__exact=userid)
+		profile = defaultdict(list)
 
-    try:
-	u = User.objects.get(id__exact=userid)
-        try:
-	    gameids = u.gamingids
-	    profile = {
-		'name': u.get_full_name(),
-		'steamid': gameids.steamID,
-		'xboxid': gameids.xboxID,
-		'psnid': gameids.psnID,
-		'xfireid': gameids.xfireID,
-	    }
-	except GamingIDs.DoesNotExist:
-	    profile = {'name': u.get_full_name(),}
+		STEAM_URL = 'http://steamcommunity.com/id/%s/?xml=1'
+		url = STEAM_URL % u.gamingids.steamID
+		feed = urllib.urlopen(url)
+		rss = parse(feed).getroot()
+		profile.update({
+			's_online': rss.findtext('stateMessage'),
+			's_rating': rss.findtext('steamRating'),
+			's_joined': rss.findtext('memberSince'),
+			's_avatar': rss.findtext('avatarFull'),
+			's_played': rss.findtext('hoursPlayed2Wk'),
+		})
+		profile['s_games'] = []
+		for e in rss.findall('mostPlayedGames/mostPlayedGame'):
+			n += 1
+			x = SteamGame(e) 
+			profile['s_games'].append(x)
+		
+		try:
+			gameids = u.gamingids
+			profile.update({
+			'name': u.get_full_name(),
+			'steamid': gameids.steamID,
+			'xboxid': gameids.xboxID,
+			'psnid': gameids.psnID,
+			'xfireid': gameids.xfireID,
+			})
+		except GamingIDs.DoesNotExist:
+			profile.update({'name': u.get_full_name(),})
+
+		try:
+			profile.update({
+				'profile_img':  MEDIA_URL + str(u.membermetadata.profile_picture),
+				'profile_quote': u.membermetadata.profile_quote,
+			})
+		except MemberMetadata.DoesNotExist:
+			profile['profile_img'] = 'http://vcc.static-cap.com/images/profile-default.png?1275442168'
 	
-	try:
-		profile['profile_img'] =  MEDIA_URL + str(u.membermetadata.profile_picture)
-		profile['profile_quote'] = u.membermetadata.profile_quote
-	except MemberMetadata.DoesNotExist:
-		profile['profile_img'] = 'http://vcc.static-cap.com/images/profile-default.png?1275442168'
-	
-	try:
-	    profile['nickname'] = u.nicknamedetails.nickname
-	except NicknameDetails.DoesNotExist:
-	    profile['nickname'] = ""
+		try:
+			profile['nickname'] = u.nicknamedetails.nickname
+		except NicknameDetails.DoesNotExist:
+			profile['nickname'] = ""
 
-	try:
-		profile['joined'] = u.memberjoin.year
-	except u.MemberJoin.DoesNotExist:
-		profile['joined'] = 0
+		try:
+			profile['joined'] = u.memberjoin.year
+		except u.MemberJoin.DoesNotExist:
+			profile['joined'] = 0
 
-	try:
-	    profile['website_url'] = u.websitedetails.websiteUrl
-	    profile['website_name'] = u.websitedetails.websiteTitle
-	except WebsiteDetails.DoesNotExist:
-	    pass	    
+		try:
+			profile.update({
+				'website_url': u.websitedetails.websiteUrl,
+				'website_name': u.websitedetails.websiteTitle,
+			})
+		except WebsiteDetails.DoesNotExist:
+			pass	    
 
-	return render_to_response('memberinfo/profile.html',
-            profile,
-	context_instance=RequestContext(request,{},[path_processor]))
-    except User.DoesNotExist:
-	error = "this user does not exist."
-    return render_to_response('memberinfo/request_error.html',{
-	        'name':'profile',
-		'error':error,
-	},context_instance=RequestContext(request,{},[path_processor]))
+		return render_to_response('memberinfo/profile.html',
+			profile,
+			context_instance=RequestContext(request,{},[path_processor]))
+	except User.DoesNotExist:
+		error = "this user does not exist."
+	return render_to_response('memberinfo/request_error.html',{
+			'name':'profile',
+			'error':error,
+		},context_instance=RequestContext(request,{},[path_processor]))

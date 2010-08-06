@@ -1,3 +1,4 @@
+*.swp
 *.pyc
 ._*
 settings.py

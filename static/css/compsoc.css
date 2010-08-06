@@ -668,6 +668,8 @@ pre {
 	background-image: url('/static/img/vertborderlight.png');
 	background-repeat: repeat-x;
 	background-size: auto 100%;
+	-moz-background-size: auto 100%;
+	-o-background-size: auto 100%;
 	background-color: #333;
 }
 
@@ -705,4 +707,28 @@ pre {
 #psntab {
 	background-image: none;
 }
-/* fix to "old" with .tab, .gamedetailentry {display: table-cell;}; */
+
+.steamavatar {
+	padding: 1em;
+	height: 14em;
+	float: left;
+}
+.gamedetailentry h3 {
+	padding-top: 0.5em;
+	font-size: 3em;
+}
+#steamgames {
+	margin-top: 0.5em;
+	margin-left: 16em;
+	width: 22em;
+	background-color: #666;
+	padding: 2px 9px;
+	border: 1px solid black;
+}
+
+.topgame .name, .topgame .hours {
+	vertical-align: 70%;
+}
+.topgame .hours {
+	font-size: 0.8em;
+}

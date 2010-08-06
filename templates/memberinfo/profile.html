@@ -9,18 +9,42 @@
 {% block content %}
 
 <div id="profilecontainer">
-	<img src="{{ profile_img }}" alt="{{ nickname }}'s  mug" class="profilepic" />
+	<img src="{{ profile_img }}" alt="{{ nickname }}'s mug" class="profilepic" />
 	<div id="personal">
 	<h1 class="name">{{ name }}</h1>
 	{% if nickname %}<span class="nickname">{{ nickname }}</span>{% endif %}
 	{% if profile_quote %}<span class="quote">{{ profile_quote }}</span>{% endif %}
 	{% if joined %}<span class="joined">Member since {{ joined }}</span>{% endif %}
-	{% if website_url %}<span class="website">Website:</span> <a href="{{ website_url }}" title="{{ website_name }}">{{ website_name }}</a></span>{% endif %}
+	{% if website_url %}<span class="website">Website:</span> <a href="{{ website_url }}" title="{{ website_name }}">{{ website_name }}</a>{% endif %}
 	</div>
 	<div id="gameprofile">
-		{% if steamid %}<div class="gamedetailentry" id="steamprofile"><a href="http://www.steamcommunity.com/id/{{ steamid }}" title="Steam Community :: ID :: {{ steamid }}">{{ steamid }}</a></div><div class="tab"><div class="verticalmenuheader" id="steamtab"><span class="verticalmenuheadercontent">Steam</span></div></div> {% endif %}
-		{% if xboxid %}<div class="gamedetailentry" id="xboxprofile"><a href="http://live.xbox.com/en-US/profile/profile.aspx?pp=0&GamerTag={{ xboxid }}" title="Xbox.com - {{ xboxid }}"><img src="http://card.mygamercard.net/aero/{{ xboxid }}.png" class="xblgamercard" title="{{ xboxid }}'s gamercard, powered by MyGamerCard" /></a></div><div class="tab"><div class="verticalmenuheader"><span class="verticalmenuheadercontent">Xbox</span></div></div> {% endif %}
-		{% if psnid %}<div class="gamedetailentry" id="psnprofile"><a href="http://eu.playstation.com/psn/profile/{{ psnid }}/" title="Playstation.com - Public Profile - {{ psnid }}"><img src="http://mypsn.eu.playstation.com/psn/profile/{{ psnid }}.png" class="psncard" title="{{ psnid }}'s trophies" /></a></div><div class="tab" id="psntab"><div class="verticalmenuheader"><span class="verticalmenuheadercontent">PSN</span></div></div> {% endif %}
+		{% if steamid %}
+			<div class="gamedetailentry" id="steamprofile">
+				<img src="{{ s_avatar }}" alt="{{ steamid }}'s Steam Avatar" class="steamavatar" />
+				<h3><a href="http://www.steamcommunity.com/id/{{ steamid }}" title="Steam Community :: ID :: {{ steamid }}">{{ steamid }}</a></h3>{{ s_played }} hours in past 2 weeks - {{ s_online }}
+				<div id="steamgames">
+					{% for o in s_games %}
+					<div class="topgame">
+						<img class="img" src="{{ o.icon }}" alt="{{ o.name }}" />
+						<span class="name" title="Time played: {{ o.hours }} / {{ o.total }}">{{ o.name }}</span>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="tab"><div class="verticalmenuheader" id="steamtab"><span class="verticalmenuheadercontent">Steam</span></div></div>
+		{% endif %}
+		{% if xboxid %}
+			<div class="gamedetailentry" id="xboxprofile">
+				<a href="http://live.xbox.com/en-US/profile/profile.aspx?pp=0&amp;GamerTag={{ xboxid }}" title="Xbox.com - {{ xboxid }}"><img src="http://card.mygamercard.net/aero/{{ xboxid }}.png" class="xblgamercard" title="{{ xboxid }}'s gamercard, powered by MyGamerCard" alt="{{ xboxid }}'s gamercard" /></a>
+			</div>
+			<div class="tab"><div class="verticalmenuheader"><span class="verticalmenuheadercontent">Xbox</span></div></div>
+		{% endif %}
+		{% if psnid %}
+			<div class="gamedetailentry" id="psnprofile">
+				<a href="http://eu.playstation.com/psn/profile/{{ psnid }}/" title="Playstation.com - Public Profile - {{ psnid }}"><img src="http://mypsn.eu.playstation.com/psn/profile/{{ psnid }}.png" class="psncard" title="{{ psnid }}'s trophies" alt="{{ psnid }}'s trophies" /></a>
+			</div>
+			<div class="tab" id="psntab"><div class="verticalmenuheader"><span class="verticalmenuheadercontent">PSN</span></div></div>
+		{% endif %}
 	</div>
 
 		{% if xfireid %}<span class="detailtitle">Xfire:</span> <a href="http://www.xfire.com/profile/{{ xfireid }}" title="Xfire :: {{ xfireid }}">{{ xfireid }}</a>{% endif %}
